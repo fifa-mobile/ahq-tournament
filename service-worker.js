@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ahq-tournament/precache-manifest.2b4063d5be6647582e51b035d51e28c9.js"
+  "/ahq-tournament/precache-manifest.4d317e31228c9bf8877d0a94d2c47705.js"
 );
 
 self.addEventListener('message', (event) => {

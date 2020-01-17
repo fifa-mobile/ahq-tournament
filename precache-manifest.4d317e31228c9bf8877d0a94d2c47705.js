@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a80de89bec50f98aa721a8a89c5af247",
+    "revision": "cc7331f6e2d21aa69946156970132900",
     "url": "/ahq-tournament/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ahq-tournament/static/css/2.77169bba.chunk.css"
   },
   {
-    "revision": "5b3bf62d6173081a5d1e",
+    "revision": "5d55825e8ee796b50bc3",
     "url": "/ahq-tournament/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ahq-tournament/static/js/2.2cb556a3.chunk.js.LICENSE"
   },
   {
-    "revision": "5b3bf62d6173081a5d1e",
-    "url": "/ahq-tournament/static/js/main.3f81010a.chunk.js"
+    "revision": "5d55825e8ee796b50bc3",
+    "url": "/ahq-tournament/static/js/main.e2f41ac6.chunk.js"
   },
   {
     "revision": "4282e2091cb6ecc5eae8",
