@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import $ from 'jquery';
+import './loader.js';
+import 'jquery-bracket/dist/jquery.bracket.min.css';
+import 'jquery-bracket/dist/jquery.bracket.min.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    $(function() {
+      $.ajax({
+        url: "https://yuulye.herokuapp.com/data",
+        success: data => {
+          let brackets = {
+            teams : [],
+            results : []
+          };
+          if (data.type === 'unlocked') {
+            const count = data.content.count;
+            let teamCount = 1;
+            for (; teamCount < count; teamCount*=2) {
+              console.log(teamCount, count);
+            }
+            console.log('round# ', teamCount);
+            for (let i = 0; i < teamCount; i+=2) {
+              brackets.teams.push([`Team #${i+1}`, `Team #${i+2}`]);
+            }
+          }
+          $('#bracket').bracket({
+            init: brackets,
+          });
+        },
+        error: e => {
+          console.log('error', e);
+        },
+      });
+    });
+  }
+
+  render() {
+    return (
+      <div id="bracket"/>
+    );
+  }
 }
 
 export default App;
