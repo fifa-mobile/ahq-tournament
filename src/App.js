@@ -9,7 +9,7 @@ class App extends React.Component {
   componentDidMount() {
     $(function() {
       $.ajax({
-        url: "http://localhost:5000/data",
+        url: "https://yuulye.herokuapp.com/data",
         success: data => {
           let brackets = {
             teams : [],
